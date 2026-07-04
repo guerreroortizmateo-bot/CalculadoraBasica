@@ -25,17 +25,32 @@ void main() {
 
                 resultado = dato1 + dato2;
 
-                IO.println("Resultado: " + resultado); break;
+                IO.println("El resultado es: " + resultado); break;
 
             case "2":
+
                 texto = IO.readln("Ingrese primer número: ");
                 dato1 = Float.parseFloat(texto);
 
                 texto = IO.readln("Ingrese el segundo número: ");
                 dato2 = Float.parseFloat(texto);
+
                 resultado = dato1 - dato2;
-                IO.println("Resultado: " + resultado); break;
-            case "3": IO.println("Multiplicar"); break;
+
+                IO.println("El resultado es: " + resultado); break;
+
+            case "3":
+
+                texto = IO.readln("Ingrese primer número: ");
+                dato1 = Float.parseFloat(texto);
+
+                texto = IO.readln("Ingrese el segundo número: ");
+                dato2 = Float.parseFloat(texto);
+
+                resultado = dato1 * dato2;
+
+                IO.println("El resultado es: " + resultado);
+
             case "4": IO.println("Division"); break;
             case"0": IO.println("Salir"); break;
             default:
