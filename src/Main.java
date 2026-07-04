@@ -1,27 +1,39 @@
 
 void main() {
-    IO.println(String.format("INVENTARIO LICORERIA"));
-    IO.println(String.format("seleccione opcion"));
-    float dato1 = 40;
-    float dato2 = 60;
 
-    IO.println("Calculadora");
-    String texto = IO.readln("Ingrese el primer valor: ");
-    dato1 = Integer.parseInt(texto);
-    texto = IO.readln("Ingrese el segundo valor: ");
-    dato2 = Integer.parseInt(texto);
+    String texto ="";
+    String opcion = "";
+    float dato1 = 0;
+    float dato2 = 0;
     float resultado = 0;
-    resultado = dato1 + dato2;
-    IO.println(String.format("El resultado de %s + %s = %s", dato1, dato2, resultado));
-    String opcion ="";
-    while (!Objects.equals(opcion, "0")) {
-        IO.println("1. Suma\n2.Resta\n3.Multiplicacion\n4Division\n0.Salir");
+    while (!opcion.equals("o")) {
+        IO.println("\n===== CALCULADORA =====");
+        IO.println("1. Suma");
+        IO.println("2. Resta");
+        IO.println("3. Multiplicación");
+        IO.println("4. División");
+        IO.println("0. Salir");
         opcion = IO.readln("Ingrese su opcion: ");
-        IO.println(opcion);
         switch (opcion) {
-            case "1": IO.println("Sumar"); break;
+            case "1":
+
+                texto = IO.readln("Ingrese el primer número: ");
+                dato1 = Float.parseFloat(texto);
+
+                texto = IO.readln("Ingrese el segundo número: ");
+                dato2 = Float.parseFloat(texto);
+
+                resultado = dato1 + dato2;
+
+                IO.println("Resultado: " + resultado);
+
+                break;
             case "2": IO.println("Restar"); break;
-            default: {};
+            case "3": IO.println("Multiplicar"); break;
+            case "4": IO.println("Division"); break;
+            case"0": IO.println("Salir"); break;
+            default:
+                IO.println("Opcion no valida"); break;
         }
     }
 }
