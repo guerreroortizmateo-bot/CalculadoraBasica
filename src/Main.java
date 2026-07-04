@@ -8,7 +8,7 @@ void main() {
     float resultado = 0;
     while (!opcion.equals("0")) {
         IO.println("\n===== CALCULADORA =====");
-        IO.println("Recuerde ingresar unicamente números");
+        IO.println("(Recuerde ingresar unicamente números)");
         IO.println("1. Suma");
         IO.println("2. Resta");
         IO.println("3. Multiplicación");
