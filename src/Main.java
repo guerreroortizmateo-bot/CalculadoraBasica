@@ -49,9 +49,19 @@ void main() {
 
                 resultado = dato1 * dato2;
 
+                IO.println("El resultado es: " + resultado); break;
+
+            case "4":
+
+                texto = IO.readln("Ingrese el primer número: ");
+                dato1 = Float.parseFloat(texto);
+
+                texto = IO.readln("Ingrese el segundo número: ");
+                dato2 = Float.parseFloat(texto);
+
+                resultado = dato1 / dato2;
                 IO.println("El resultado es: " + resultado);
 
-            case "4": IO.println("Division"); break;
             case"0": IO.println("Salir"); break;
             default:
                 IO.println("Opcion no valida"); break;
