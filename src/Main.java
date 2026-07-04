@@ -6,7 +6,7 @@ void main() {
     float dato1 = 0;
     float dato2 = 0;
     float resultado = 0;
-    while (!opcion.equals("o")) {
+    while (!opcion.equals("0")) {
         IO.println("\n===== CALCULADORA =====");
         IO.println("1. Suma");
         IO.println("2. Resta");
@@ -59,8 +59,14 @@ void main() {
                 texto = IO.readln("Ingrese el segundo número: ");
                 dato2 = Float.parseFloat(texto);
 
-                resultado = dato1 / dato2;
-                IO.println("El resultado es: " + resultado);
+                if (dato2 == 0) {
+                    IO.println("Error, no se puede dividir entre cero");
+
+                }
+                else {
+                    resultado = dato1 / dato2;
+                    IO.println("El resultado es: " + resultado);
+                }; break;
 
             case"0": IO.println("Salir"); break;
             default:
