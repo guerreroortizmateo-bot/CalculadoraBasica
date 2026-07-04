@@ -14,6 +14,7 @@ void main() {
         IO.println("3. Multiplicación");
         IO.println("4. División");
         IO.println("5. Raiz cuadrada");
+        IO.println("6. Potenciacion");
         IO.println("0. Salir");
         opcion = IO.readln("Ingrese su opcion: ");
         switch (opcion) {
@@ -76,6 +77,18 @@ void main() {
                 dato1 = Float.parseFloat(texto);
 
                 resultado = (float) Math.sqrt(dato1);
+
+                IO.println("El resultado es: " + resultado); break;
+
+            case "6":
+
+                texto = IO.readln("Ingrese primer numero: ");
+                dato1 = Float.parseFloat(texto);
+
+                texto = IO.readln("Ingrese el valor del exponente: ");
+                dato2 = Float.parseFloat(texto);
+
+                resultado = (float) Math.pow(dato1, dato2);
 
                 IO.println("El resultado es: " + resultado); break;
 
